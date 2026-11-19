@@ -1,6 +1,6 @@
 cask "kalizap" do
-  version "0.1.1"
-  sha256 "869455f3c21535d14204adf090477db9dc6ad6575929a362261f2efee0e9d275"
+  version "0.1.2"
+  sha256 "588429f35728b1bcf45f9392596833b0d0cb3d9ba7a374f743bfdde64bf58fdd"
 
   url "https://github.com/msandhofer/Kalizap/releases/download/v#{version}/Kalizap-#{version}.zip"
   name "Kalizap"
