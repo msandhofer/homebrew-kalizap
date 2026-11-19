@@ -9,11 +9,12 @@ cask "kalizap" do
 
   app "Kalizap.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Kalizap.app"],
-                   sudo: false,
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Kalizap.app"],
+        must_succeed:   false,
+        writable_paths: ["Kalizap.app"],
+        writable_base:  :appdir
   end
 
   caveats <<~EOS
