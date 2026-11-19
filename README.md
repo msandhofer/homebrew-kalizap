@@ -6,8 +6,11 @@ Homebrew-Tap-Repository f√ºr [Kalizap](https://github.com/msandhofer/Kalizap) ‚Ä
 
 ```
 brew tap msandhofer/kalizap
+brew trust --cask msandhofer/kalizap/kalizap
 brew install --cask kalizap
 ```
+
+Neuere Homebrew-Versionen laden Casks aus Fremd-Taps erst nach explizitem `brew trust`. Der Befehl oben vertraut nur dem Kalizap-Cask, nicht dem ganzen Tap.
 
 ## Voraussetzungen
 
